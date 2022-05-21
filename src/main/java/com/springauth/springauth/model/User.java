@@ -5,6 +5,7 @@ import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 import java.util.HashSet;
+import java.util.Optional;
 import java.util.Set;
 
 @Entity
@@ -47,6 +48,9 @@ public class User {
         this.roles = roles;
     }
 
+    public User(String username, String email, String encode) {
+    }
+
     public Long getId() {
         return id;
     }
@@ -83,7 +87,7 @@ public class User {
         return roles;
     }
 
-    public void setRoles(Set<Role> roles) {
+    public void setRoles(Set<Optional<Role>> roles) {
         this.roles = roles;
     }
 }
