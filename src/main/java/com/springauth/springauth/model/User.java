@@ -6,6 +6,7 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 import java.util.HashSet;
 import java.util.Optional;
+import java.util.HashSet;
 import java.util.Set;
 
 @Entity
@@ -87,7 +88,7 @@ public class User {
         return roles;
     }
 
-    public void setRoles(Set<Optional<Role>> roles) {
+    public void setRoles(Set<Role> roles) {
         this.roles = roles;
     }
 }

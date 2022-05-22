@@ -11,10 +11,10 @@ import org.slf4j.Logger;
 public class JwtUtils {
     private static final Logger logger = (Logger) LoggerFactory.getLogger(JwtUtils.class);
 
-    @Value("${spring-auth.app.jwtSecret}")
+    @Value("${bezkoder.app.jwtSecret}")
     private String jwtSecret;
 
-    @Value("${spring-auth.app.jwtExpirationMs}")
+    @Value("${bezkoder.app.jwtSecret}")
     private int jwtExpirationMs;
 
     public String generatedJwtToken(Authentication authentication){
